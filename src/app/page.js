@@ -10,6 +10,7 @@ import Services from '../components/Services';
 import Reviews from '@/components/Reviews';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
 
 export default function Home() {
   const [lang, setLang] = useState('es');
@@ -35,6 +36,8 @@ export default function Home() {
       <Services t={t} lang={lang} />
 
       <Reviews t={t} lang={lang} />
+
+      <Gallery />
       
       <Contact t={t} />
 

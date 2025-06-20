@@ -1,24 +1,73 @@
 "use client";
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import './Navbar.css';
 
+const sections = ['inicio', 'quienes-somos', 'servicios', 'galeria', 'contacto'];
+
 export default function Navbar({ lang, handleChangeLang, t }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  // Scrollspy - detectar sección visible
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY + 120; // offset
+
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const bottom = top + el.offsetHeight;
+          if (scrollY >= top && scrollY < bottom) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // inicial
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  const getSectionName = (id) => {
+    return {
+      'inicio': t.inicio,
+      'quienes-somos': t.quienesSomos,
+      'servicios': lang === 'es' ? 'Servicios' : lang === 'en' ? 'Services' : lang === 'fr' ? 'Services' : lang === 'de' ? 'Dienstleistungen' : 'Diensten',
+      'galeria': t.galeria,
+      'contacto': t.contacto,
+    }[id];
+  };
+
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        <img
-        src="/logoP.png"
-        alt="Logo de la empresa: JotaLopezDJ"
-        className="navbar-logo"
-        />
-        <div className="navbar-links">
-          <Link href="#inicio" className="navbar-link">{t.inicio}</Link>
-          <Link href="#quienes-somos" className="navbar-link">{t.quienesSomos}</Link>
-          <Link href="#servicios" className="navbar-link">
-            {lang === 'es' ? 'Servicios' : lang === 'en' ? 'Services' : lang === 'fr' ? 'Services' : lang === 'de' ? 'Dienstleistungen' : 'Diensten'}
-          </Link>
-          <Link href="#galeria" className="navbar-link">{t.galeria}</Link>
-          <Link href="#contacto" className="navbar-link">{t.contacto}</Link>
+        <Link href="#inicio" className="navbar-logo" onClick={closeMenu}>
+          <img src="/logo.png" alt="Logo" className="navbar-logo" />
+        </Link>
+
+        <button className="navbar-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+          {sections.map((id) => (
+            <Link
+              key={id}
+              href={`#${id}`}
+              className={`navbar-link ${activeSection === id ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              {getSectionName(id)}
+            </Link>
+          ))}
 
           <select
             onChange={handleChangeLang}
