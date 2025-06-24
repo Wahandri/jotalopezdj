@@ -30,13 +30,13 @@ export default function HeroSection({ t }) {
       setTimeout(() => {
         subtitleRef.current.style.animation = 'fade-in 0.5s ease forwards';
         buttonRef.current.style.animation = 'fade-in 0.5s ease forwards';
-      }, 1000);
+      }, 0);
       
       // Eliminar onda después de la animación
       setTimeout(() => {
         wave.remove();
       }, 1500);
-    }, 3000); // Esperar 3s (duración del slide-in)
+    }, 0.5); // Esperar 3s (duración del slide-in)
 
     return () => clearTimeout(slideTimer);
   }, []);
