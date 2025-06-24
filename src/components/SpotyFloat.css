@@ -1,0 +1,68 @@
+.spoty-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  /* Botón flotante */
+  .toggle-button {
+    background-color: #1db954; /* verde Spotify */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .toggle-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Contenedor del iframe */
+  .spotify-player {
+    margin-top: 10px;
+    width: 300px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 🔽 Estilos para pantallas pequeñas (móviles) */
+  @media (max-width: 600px) {
+    .spoty-float {
+      bottom: 16px;
+      right: 16px;
+      align-items: flex-end;
+    }
+  
+    .spotify-player {
+      width: 100vw;
+      max-width: 100%;
+      padding: 0 12px;
+    }
+  
+    .toggle-button {
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
+    }
+  }
+  

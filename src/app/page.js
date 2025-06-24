@@ -11,6 +11,7 @@ import Reviews from '@/components/Reviews';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
+import SpotyFloat from '@/components/SpotyFloat';
 
 export default function Home() {
   const [lang, setLang] = useState('es');
@@ -42,6 +43,8 @@ export default function Home() {
       <Contact t={t} />
 
       <Footer t={t} />
+
+      <SpotyFloat />
     </div>
   );
 }
