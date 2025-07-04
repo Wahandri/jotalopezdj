@@ -1,43 +1,45 @@
 "use client";
-import './Contact.css';
+import "./Contact.css";
 
 export default function Contact({ t }) {
+  const contactoInfo = t?.contactoInfo || {};
+
   return (
     <section id="contacto" className="contact-section">
-      <h2 className="contact-title">{t.contacto}</h2>
+      <h2 className="contact-title">{t?.nav?.contacto || "Contacto"}</h2>
       <div className="contact-wrapper">
         <div className="contact-info">
-          <p>{t.contactoInfo.telefono}</p>
-          <p>{t.contactoInfo.email}</p>
-          <p>{t.contactoInfo.ubicacion}</p>
+          <p>612356789</p>
+          <p>jotalopedj@gmail.com</p>
+          <p>Malaga</p>
         </div>
-        <form 
-          className="contact-form" 
+        <form
+          className="contact-form"
           onSubmit={(e) => {
             e.preventDefault();
-            alert('Formulario enviado!');
+            alert("Formulario enviado!");
           }}
         >
           <input
             type="text"
-            placeholder={t.contactoInfo.nombrePlaceholder}
+            placeholder={contactoInfo.nombrePlaceholder || "Tu nombre"}
             required
             className="contact-input"
           />
           <input
             type="email"
-            placeholder={t.contactoInfo.emailPlaceholder}
+            placeholder={contactoInfo.emailPlaceholder || "Tu email"}
             required
             className="contact-input"
           />
           <textarea
-            placeholder={t.contactoInfo.mensajePlaceholder}
+            placeholder={contactoInfo.mensajePlaceholder || "Tu mensaje"}
             required
             rows={4}
             className="contact-textarea"
           />
           <button type="submit" className="contact-submit">
-            {t.contactoInfo.enviarMensaje}
+            {contactoInfo.enviarMensaje || "Enviar"}
           </button>
         </form>
       </div>

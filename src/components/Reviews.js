@@ -1,26 +1,24 @@
+// src/components/Reviews.js
 "use client";
-import './Reviws.css';
+import "./Reviews.css";
 
-export default function Reviws({ t, lang }) {
-  const sectionTitle = {
-    es: 'Testimonios',
-    en: 'Testimonials',
-    fr: 'Témoignages',
-    de: 'Referenzen',
-    nl: 'Getuigenissen',
-  }[lang] || 'Testimonios';
+export default function Reviews({ t }) {
+  const testimonios = Array.isArray(t.testimonios) ? t.testimonios : [];
 
   return (
-    <section className="reviws-section">
-      <h2 className="reviws-title">{sectionTitle}</h2>
-      {t.testimonios.map(({ text, author, event }, idx) => (
-        <blockquote key={idx} className="reviws-blockquote">
-          “{text}”
-          <footer className="reviws-footer">
-            {author} — <span>{event}</span>
-          </footer>
-        </blockquote>
-      ))}
+    <section id="testimonios" className="reviews-section">
+      <h2 className="reviews-title">{t.tituloTestimonios}</h2>
+      <div className="reviews-grid">
+        {testimonios.map((review, index) => (
+          <div key={index} className="review-card">
+            <p className="review-text">“{review.text}”</p>
+            <p className="review-author">
+              — {review.author},{" "}
+              <span className="review-event">{review.event}</span>
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

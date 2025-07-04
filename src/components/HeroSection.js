@@ -10,33 +10,24 @@ export default function HeroSection({ t }) {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // 1. Animación de entrada del logo (3s)
     const wave = document.createElement("div");
     wave.className = "wave-effect";
     logoContainerRef.current.appendChild(wave);
 
-    // 2. Al terminar el slide (1s), activar retumbo + onda
     const slideTimer = setTimeout(() => {
-      // Retumbar el logo
       logoRef.current.style.animation = "logo-pulse 0.8s ease";
-
-      // Animación de la onda
       wave.style.animation = "wave-animation 1.5s ease-out forwards";
-
-      // Revelar fondo permanentemente
       bgImageRef.current.style.opacity = "1";
 
-      // Mostrar texto y botón (1s después de la onda)
       setTimeout(() => {
         subtitleRef.current.style.animation = "fade-in 0.5s ease forwards";
         buttonRef.current.style.animation = "fade-in 0.5s ease forwards";
       }, 0);
 
-      // Eliminar onda después de la animación
       setTimeout(() => {
         wave.remove();
       }, 1500);
-    }, 1); // Esperar 1s (duración del slide-in)
+    }, 1);
 
     return () => clearTimeout(slideTimer);
   }, []);
@@ -54,12 +45,19 @@ export default function HeroSection({ t }) {
         />
       </div>
 
+      <h1 className="hero-title">{t.hero.titulo}</h1>
+
       <p className="hero-subtitle" ref={subtitleRef}>
-        Creamos experiencias únicas para todo tipo de eventos.
+        {t.hero.subtitulo.split("\n").map((line, i) => (
+          <span key={i}>
+            {line}
+            <br />
+          </span>
+        ))}
       </p>
 
       <a href="https://wa.me/TUNUMERO" className="hero-button" ref={buttonRef}>
-        {t.reserva}
+        {t.hero.reserva}
       </a>
     </section>
   );
