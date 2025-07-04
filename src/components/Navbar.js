@@ -1,11 +1,13 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import './Navbar.css';
 
 const sections = ['inicio', 'quienes-somos', 'servicios', 'galeria', 'contacto'];
 
-export default function Navbar({ lang, handleChangeLang, t }) {
+export default function Navbar({ lang, handleChangeLang }) {
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -38,11 +40,11 @@ export default function Navbar({ lang, handleChangeLang, t }) {
 
   const getSectionName = (id) => {
     return {
-      'inicio': t.inicio,
-      'quienes-somos': t.quienesSomos,
-      'servicios': lang === 'es' ? 'Servicios' : lang === 'en' ? 'Services' : lang === 'fr' ? 'Services' : lang === 'de' ? 'Dienstleistungen' : 'Diensten',
-      'galeria': t.galeria,
-      'contacto': t.contacto,
+      'inicio': t('nav.inicio'),
+      'quienes-somos': t('nav.quienesSomos'),
+      'servicios': t('nav.servicios'),
+      'galeria': t('nav.galeria'),
+      'contacto': t('nav.contacto'),
     }[id];
   };
 

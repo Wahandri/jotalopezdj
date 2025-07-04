@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "./HeroSection.css";
 
-export default function HeroSection({ t }) {
+export default function HeroSection() {
+  const { t } = useTranslation();
   const bgImageRef = useRef(null);
   const logoRef = useRef(null);
   const logoContainerRef = useRef(null);
@@ -45,10 +47,10 @@ export default function HeroSection({ t }) {
         />
       </div>
 
-      <h1 className="hero-title">{t.hero.titulo}</h1>
+      <h1 className="hero-title">{t('hero.titulo')}</h1>
 
       <p className="hero-subtitle" ref={subtitleRef}>
-        {t.hero.subtitulo.split("\n").map((line, i) => (
+        {t('hero.subtitulo').split("\n").map((line, i) => (
           <span key={i}>
             {line}
             <br />
@@ -57,7 +59,7 @@ export default function HeroSection({ t }) {
       </p>
 
       <a href="https://wa.me/TUNUMERO" className="hero-button" ref={buttonRef}>
-        {t.hero.reserva}
+        {t('hero.reserva')}
       </a>
     </section>
   );

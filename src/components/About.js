@@ -1,13 +1,15 @@
 "use client";
 import "./About.css";
+import { useTranslation } from "react-i18next";
 
-export default function About({ t }) {
+export default function About() {
+  const { t } = useTranslation();
   return (
     <section id="quienes-somos" className="about-section">
       <div className="about-container">
         <div className="about-left">
-          <h2 className="about-title">{t.quienesSomos}</h2>
-          <p className="about-text">{t.quienesSomosTexto}</p>
+          <h2 className="about-title">{t('nav.quienesSomos')}</h2>
+          <p className="about-text">{t('quienesSomosTexto')}</p>
         </div>
         <div className="about-right">
           <img

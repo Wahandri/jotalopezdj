@@ -1,23 +1,16 @@
 "use client";
 import "./Services.css";
+import { useTranslation } from "react-i18next";
 
-export default function Services({ t, lang }) {
-  const sectionTitle =
-    {
-      es: "Servicios",
-      en: "Services",
-      nl: "Diensten",
-    }[lang] || "Servicios";
+export default function Services() {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || 'es';
 
-  const packageTitle =
-    {
-      es: "Nuestros Paquetes de Servicios",
-      en: "Our Service Packages",
-      nl: "Onze Servicepakketten",
-    }[lang] || "Nuestros Paquetes de Servicios";
+  const sectionTitle = t('nav.servicios');
+  const packageTitle = t('paquetesTitle');
 
-  const servicios = Array.isArray(t.servicios) ? t.servicios : [];
-  const paquetes = Array.isArray(t.paquetes) ? t.paquetes : [];
+  const servicios = t('servicios', { returnObjects: true }) || [];
+  const paquetes = t('paquetes', { returnObjects: true }) || [];
 
   return (
     <section id="servicios" className="services-section">
