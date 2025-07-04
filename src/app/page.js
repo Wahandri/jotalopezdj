@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
-        <title>Hermanos DJ - Música para Eventos</title>
+        <title>Jota Lopez DJ - Música para Eventos</title>
       </Head>
 
       <Navbar lang={lang} handleChangeLang={handleChangeLang} />

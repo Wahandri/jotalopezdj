@@ -1,15 +1,21 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
-import './Navbar.css';
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import "./Navbar.css";
 
-const sections = ['inicio', 'quienes-somos', 'servicios', 'galeria', 'contacto'];
+const sections = [
+  "inicio",
+  "quienes-somos",
+  "servicios",
+  "galeria",
+  "contacto",
+];
 
 export default function Navbar({ lang, handleChangeLang }) {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
 
   // Scrollspy - detectar sección visible
   useEffect(() => {
@@ -29,10 +35,10 @@ export default function Navbar({ lang, handleChangeLang }) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll(); // inicial
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -40,11 +46,11 @@ export default function Navbar({ lang, handleChangeLang }) {
 
   const getSectionName = (id) => {
     return {
-      'inicio': t('nav.inicio'),
-      'quienes-somos': t('nav.quienesSomos'),
-      'servicios': t('nav.servicios'),
-      'galeria': t('nav.galeria'),
-      'contacto': t('nav.contacto'),
+      inicio: t("nav.inicio"),
+      "quienes-somos": t("nav.quienesSomos"),
+      servicios: t("nav.servicios"),
+      galeria: t("nav.galeria"),
+      contacto: t("nav.contacto"),
     }[id];
   };
 
@@ -59,12 +65,12 @@ export default function Navbar({ lang, handleChangeLang }) {
           ☰
         </button>
 
-        <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {sections.map((id) => (
             <Link
               key={id}
               href={`#${id}`}
-              className={`navbar-link ${activeSection === id ? 'active' : ''}`}
+              className={`navbar-link ${activeSection === id ? "active" : ""}`}
               onClick={closeMenu}
             >
               {getSectionName(id)}
@@ -79,8 +85,6 @@ export default function Navbar({ lang, handleChangeLang }) {
           >
             <option value="es">Español</option>
             <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
             <option value="nl">Nederlands</option>
           </select>
         </div>
