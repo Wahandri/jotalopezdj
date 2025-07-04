@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "inicio": "Start",
+    "quienesSomos": "Over Ons",
+    "galeria": "Galerij",
+    "contacto": "Contact",
+    "reserva": "Boek via WhatsApp!",
+    "social": [
+      "Instagram",
+      "Facebook",
+      "SoundCloud",
+      "YouTube"
+    ],
+    "footerRights": "© 2025 Hermanos DJ. Alle rechten voorbehouden.",
+    "servicios": "Diensten"
+  },
+  "hero": {
+    "titulo": "Wij maken van elk evenement een unieke ervaring met muziek.",
+    "subtitulo": "Van stijlvolle bruiloften tot bruisende bedrijfsevenementen — ons DJ-team zorgt voor onvergetelijke momenten.",
+    "reserva": "Boek via WhatsApp!"
+  },
+  "quienesSomosTexto": "Met meer dan 10 jaar ervaring weten we hoe we elk detail kunnen afstemmen op jouw behoeften.\nWe creëren unieke sferen met op maat gemaakte muziek, licht en beleving.\nOf het nu gaat om een bruiloft, verjaardag, zakelijk evenement of privéfeest — wij maken het onvergetelijk.",
+  "servicios": [
+    {
+      "title": "Bruiloften",
+      "description": "Meer dan muziek — wij creëren de soundtrack van jullie liefde. Een gepersonaliseerde audio-visuele beleving voor een onvergetelijke dag.",
+      "extendedText": "Onze bruiloftservice omvat:\n\n• Muziekplanning vooraf (nummers kiezen voor elk moment)\n• Professioneel geluidssysteem afgestemd op de locatie\n• Sfeerverlichting en speciale effecten\n• Afstemming met het draaiboek van het evenement\n• Keuze uit live muziek of een op maat gemaakte DJ-set\n\nWij zorgen voor de sfeer zodat jullie volop kunnen genieten van jullie perfecte dag.",
+      "image": "/images/bodas.jpg"
+    },
+    {
+      "title": "Verjaardagen",
+      "description": "Het feest zoals jij het voor je ziet — wij maken het werkelijkheid. Voor jong en oud zorgen we voor de juiste sfeer met muziek en energie.",
+      "extendedText": "Onze verjaardagsdiensten:\n\n• Live DJ met een gepersonaliseerde afspeellijst\n• Lichtshows, rook en visuals\n• Spellen, interactie en optioneel karaoke\n• Geluid afgestemd op binnen of buiten\n\nWij zorgen ervoor dat niemand naar huis wil gaan.",
+      "image": "/images/cumpleaños.jpg"
+    },
+    {
+      "title": "Zakelijke Evenementen",
+      "description": "Professionaliteit en stijl voor een krachtig merkimago. Wij stemmen muziek en sfeer af op het type en de toon van je evenement.",
+      "extendedText": "Zakelijke diensten omvatten:\n\n• Achtergrondmuziek of DJ, afhankelijk van het evenement\n• Geluidssystemen voor presentaties en toespraken\n• Verlichting afgestemd op je merk of sfeer\n• Draadloze microfoons en technische ondersteuning\n• Ervaring met beurzen, lanceringen, congressen en gala's\n\nLaat jouw bedrijf een blijvende indruk achterlaten.",
+      "image": "/images/eventos-corporativos.jpg"
+    }
+  ],
+  "paquetes": [
+    {
+      "nombre": "Essentieel Pakket",
+      "detalles": [
+        "4 uur professionele DJ-service",
+        "Basis geluidsinstallatie",
+        "Sfeerverlichting",
+        "Voorafgaand consult"
+      ],
+      "precio": "Vanaf €450"
+    },
+    {
+      "nombre": "Premium Pakket",
+      "detalles": [
+        "6 uur gepersonaliseerde DJ-service",
+        "Geavanceerd geluidssysteem",
+        "Volledige professionele verlichting",
+        "2 planningsgesprekken"
+      ],
+      "precio": "Vanaf €750"
+    },
+    {
+      "nombre": "Exclusief Pakket",
+      "detalles": [
+        "8 uur exclusieve DJ-service",
+        "High-end audiovisuele apparatuur",
+        "Speciale effecten en rookmachine",
+        "Volledige eventplanning"
+      ],
+      "precio": "Vanaf €1.200"
+    }
+  ],
+  "contactoInfo": {
+    "nombrePlaceholder": "Jouw naam",
+    "emailPlaceholder": "Jouw e-mail",
+    "mensajePlaceholder": "Typ je bericht...",
+    "enviarMensaje": "Verstuur Bericht"
+  },
+  "reseñas": [
+    {
+      "nombre": "Sofie D.",
+      "texto": "Geweldige sfeer! Iedereen had het naar zijn zin."
+    },
+    {
+      "nombre": "Tom V.",
+      "texto": "Echte professionals. Onze bruiloft was perfect dankzij hen."
+    }
+  ],
+  "paquetesTitle": "Onze Servicepakketten",
+  "reviewsTitle": "Getuigenissen"
+}

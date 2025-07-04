@@ -3,7 +3,8 @@
 import Head from "next/head";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import translations from "../translations/index";
+import "../i18n";
+import { useTranslation } from "react-i18next";
 import HeroSection from "@/components/HeroSection";
 import About from "../components/About";
 import Services from "../components/Services";
@@ -14,23 +15,13 @@ import Gallery from "@/components/Gallery";
 import SpotyFloat from "@/components/SpotyFloat";
 
 export default function Home() {
-  const [lang, setLang] = useState("es");
-
-  const langData = translations[lang] || translations["es"];
-
-  const t = {
-    nav: langData.nav,
-    hero: langData.hero,
-    quienesSomos: langData.nav.quienesSomos,
-    quienesSomosTexto: langData.quienesSomosTexto,
-    servicios: langData.servicios,
-    paquetes: langData.paquetes,
-    contactoInfo: langData.contactoInfo,
-    reseñas: langData.reseñas,
-  };
+  const { i18n } = useTranslation();
+  const [lang, setLang] = useState(i18n.language || "es");
 
   const handleChangeLang = (e) => {
-    setLang(e.target.value);
+    const newLang = e.target.value;
+    setLang(newLang);
+    i18n.changeLanguage(newLang);
   };
 
   return (
@@ -39,29 +30,21 @@ export default function Home() {
         <title>Hermanos DJ - Música para Eventos</title>
       </Head>
 
-      <Navbar lang={lang} handleChangeLang={handleChangeLang} t={t.nav} />
+      <Navbar lang={lang} handleChangeLang={handleChangeLang} />
 
-      <HeroSection t={translations[lang]} />
+      <HeroSection />
 
-      <About
-        t={{
-          quienesSomos: t.quienesSomos,
-          quienesSomosTexto: t.quienesSomosTexto,
-        }}
-      />
+      <About />
 
-      <Services
-        t={{ servicios: t.servicios, paquetes: t.paquetes }}
-        lang={lang}
-      />
+      <Services />
 
-      <Reviews t={t.reseñas} lang={lang} />
+      <Reviews />
 
       <Gallery />
 
-      <Contact t={t.contactoInfo} />
+      <Contact />
 
-      <Footer t={t.nav} />
+      <Footer />
 
       <SpotyFloat />
     </div>

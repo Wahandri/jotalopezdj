@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "quienesSomos": "Quiénes Somos",
+    "galeria": "Galería",
+    "contacto": "Contacto",
+    "reserva": "¡Reserva por WhatsApp!",
+    "social": [
+      "Instagram",
+      "Facebook",
+      "SoundCloud",
+      "YouTube"
+    ],
+    "footerRights": "© 2025 Hermanos DJ. Todos los derechos reservados.",
+    "servicios": "Servicios"
+  },
+  "hero": {
+    "titulo": "Transformamos cualquier evento en una experiencia única a través de la música.",
+    "subtitulo": "Desde bodas elegantes hasta fiestas corporativas vibrantes, nuestro equipo de DJs profesionales garantiza momentos memorables.",
+    "reserva": "¡Reserva por WhatsApp!"
+  },
+  "quienesSomosTexto": "Con más de 10 años de experiencia, sabemos cómo adaptar cada detalle para que tu evento sea exactamente lo que necesitas.\nCreamos ambientes únicos con música personalizada según el tipo de celebración, cuidando la iluminación, el sonido y cada instante.\nYa sea una boda, cumpleaños, evento corporativo o fiesta privada, nuestra misión es que vivas una experiencia inolvidable.",
+  "servicios": [
+    {
+      "title": "Bodas",
+      "description": "Más que música, creamos la banda sonora de tu amor. Diseñamos una experiencia auditiva y visual personalizada para que cada momento de tu boda sea inolvidable.",
+      "extendedText": "Nuestro servicio para bodas incluye:\n\n• Asesoramiento musical previo (selección de canciones para cada momento)\n• Equipo de sonido profesional adaptado al espacio\n• Iluminación ambiental y efectos especiales\n• Coordinación con la agenda del evento\n• Opción de música en vivo o sesiones DJ personalizadas\n\nDeja que nos encarguemos de la atmósfera mientras tú disfrutas de tu día perfecto.",
+      "image": "/images/bodas.jpg"
+    },
+    {
+      "title": "Cumpleaños",
+      "description": "La fiesta que imaginas, hecha realidad. Para todas las edades, creamos un ambiente vibrante con la música y el ritmo perfectos.",
+      "extendedText": "En nuestros cumpleaños ofrecemos:\n\n• DJ en vivo con repertorio personalizado\n• Efectos de luces, humo y visuales adaptados\n• Juegos, dinámicas y animación si se requiere\n• Karaoke y participación del público\n• Control de sonido adaptado al espacio (interior o exterior)\n\nNuestro objetivo: que tú y tus invitados no quieran que la fiesta termine.",
+      "image": "/images/cumpleaños.jpg"
+    },
+    {
+      "title": "Eventos Corporativos",
+      "description": "Profesionalismo y estilo para elevar la imagen de tu empresa. Adaptamos música e iluminación al tipo de evento.",
+      "extendedText": "En eventos de empresa ofrecemos:\n\n• Música ambiental o sesiones de DJ según el tipo de evento\n• Equipos de sonido profesional para presentaciones y discursos\n• Iluminación personalizada según branding o temática\n• Micrófonos inalámbricos y soporte técnico en vivo\n• Experiencia en ferias, lanzamientos, convenciones y cenas de gala\n\nHaz que tu evento empresarial no solo cumpla su propósito, sino que se recuerde.",
+      "image": "/images/eventos-corporativos.jpg"
+    }
+  ],
+  "paquetes": [
+    {
+      "nombre": "Paquete Esencial",
+      "detalles": [
+        "4 horas de servicio DJ profesional",
+        "Equipo de sonido básico",
+        "Iluminación ambiental",
+        "Consulta previa al evento"
+      ],
+      "precio": "Desde 450€"
+    },
+    {
+      "nombre": "Paquete Premium",
+      "detalles": [
+        "6 horas de servicio DJ personalizado",
+        "Sistema de sonido avanzado",
+        "Iluminación profesional completa",
+        "2 consultas de planificación"
+      ],
+      "precio": "Desde 750€"
+    },
+    {
+      "nombre": "Paquete Exclusivo",
+      "detalles": [
+        "8 horas de servicio DJ exclusivo",
+        "Equipo audiovisual de alta gama",
+        "Efectos especiales y máquina de humo",
+        "Planificación completa del evento"
+      ],
+      "precio": "Desde 1.200€"
+    }
+  ],
+  "contactoInfo": {
+    "nombrePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu correo electrónico",
+    "mensajePlaceholder": "Escribe tu mensaje...",
+    "enviarMensaje": "Enviar Mensaje"
+  },
+  "reseñas": [
+    {
+      "nombre": "Carlos M.",
+      "texto": "¡Increíble experiencia! Gracias por hacer de nuestra boda algo inolvidable."
+    },
+    {
+      "nombre": "Laura G.",
+      "texto": "El ambiente que crearon fue mágico. Súper recomendados."
+    }
+  ],
+  "paquetesTitle": "Nuestros Paquetes de Servicios",
+  "reviewsTitle": "Testimonios"
+}
