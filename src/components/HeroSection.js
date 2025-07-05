@@ -39,7 +39,7 @@ export default function HeroSection() {
     };
 
     // Esperar a que termine entrada del logo
-    const entryDelay = setTimeout(startAnimation, 2000);
+    const entryDelay = setTimeout(startAnimation, 1000);
 
     return () => clearTimeout(entryDelay);
   }, []);
@@ -57,7 +57,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <h1 className="hero-title" ref={titleRef}>
+      <h1 className="hero-title text-gold" ref={titleRef}>
         {t("hero.titulo")}
       </h1>
 

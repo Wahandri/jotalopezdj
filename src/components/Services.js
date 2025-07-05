@@ -4,17 +4,19 @@ import { useTranslation } from "react-i18next";
 
 export default function Services() {
   const { t, i18n } = useTranslation();
-  const lang = i18n.language || 'es';
+  const lang = i18n.language || "es";
 
-  const sectionTitle = t('nav.servicios');
-  const packageTitle = t('paquetesTitle');
+  const sectionTitle = t("nav.servicios");
+  const packageTitle = t("paquetesTitle");
 
-  const servicios = t('servicios', { returnObjects: true }) || [];
-  const paquetes = t('paquetes', { returnObjects: true }) || [];
+  const servicios = t("servicios", { returnObjects: true }) || [];
+  const paquetes = t("paquetes", { returnObjects: true }) || [];
 
   return (
     <section id="servicios" className="services-section">
-      <h2 className="services-title">{sectionTitle}</h2>
+      <div className="display-center">
+        <h2 className="services-title text-gold">{sectionTitle}</h2>
+      </div>
 
       <div className="services-grid">
         {servicios.map((servicio, index) => (
@@ -35,7 +37,9 @@ export default function Services() {
 
       {/* Sección de Paquetes */}
       <div className="service-packages">
-        <h3 className="package-title">{packageTitle}</h3>
+        <div className="display-center">
+          <h3 className="package-title text-gold">{packageTitle}</h3>
+        </div>
         <div className="package-list">
           {paquetes.map((paquete, index) => (
             <div key={index} className="package-card">
@@ -45,7 +49,7 @@ export default function Services() {
                   <li key={i}>{detalle}</li>
                 ))}
               </ul>
-              <p className="package-price">{paquete.precio}</p>
+              <p className="package-price text-gold">{paquete.precio}</p>
             </div>
           ))}
         </div>

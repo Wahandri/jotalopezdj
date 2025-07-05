@@ -16,7 +16,10 @@
 .about-left {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  width: auto;
+  /* text-align: center; */
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
@@ -28,12 +31,9 @@
 }
 
 .about-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, gold, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .about-text {

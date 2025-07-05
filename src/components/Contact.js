@@ -4,11 +4,13 @@ import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const { t } = useTranslation();
-  const contactoInfo = t('contactoInfo', { returnObjects: true }) || {};
+  const contactoInfo = t("contactoInfo", { returnObjects: true }) || {};
 
   return (
     <section id="contacto" className="contact-section">
-      <h2 className="contact-title">{t('nav.contacto')}</h2>
+      <div className="display-center">
+        <h2 className="contact-title text-gold">{t("nav.contacto")}</h2>
+      </div>
       <div className="contact-wrapper">
         <div className="contact-info">
           <p>612356789</p>

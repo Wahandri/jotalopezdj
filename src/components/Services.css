@@ -6,13 +6,10 @@
 
 .services-title {
   margin-top: 100px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2.5rem;
   text-align: center;
-  background: linear-gradient(to right, #f7c873, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .services-grid {

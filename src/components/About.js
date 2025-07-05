@@ -1,4 +1,5 @@
 "use client";
+import GradientText from "./GradientText";
 import "./About.css";
 import { useTranslation } from "react-i18next";
 
@@ -8,8 +9,10 @@ export default function About() {
     <section id="quienes-somos" className="about-section">
       <div className="about-container">
         <div className="about-left">
-          <h2 className="about-title">{t('nav.quienesSomos')}</h2>
-          <p className="about-text">{t('quienesSomosTexto')}</p>
+          <div className="display-center">
+            <h2 className="about-title text-gold">{t("nav.quienesSomos")}</h2>
+          </div>
+          <p className="about-text">{t("quienesSomosTexto")}</p>
         </div>
         <div className="about-right">
           <img

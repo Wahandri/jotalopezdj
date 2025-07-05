@@ -57,7 +57,11 @@ export default function Navbar({ lang, handleChangeLang }) {
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        <Link href="#inicio" className="navbar-logo" onClick={closeMenu}>
+        <Link
+          href="#inicio"
+          className="navbar-logo text-gold"
+          onClick={closeMenu}
+        >
           {/* <img src="/logo.png" alt="Logo" className="navbar-logo" /> */}
           <h2>Jota Lopez DJ</h2>
         </Link>

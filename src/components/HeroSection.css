@@ -88,9 +88,6 @@ html {
   max-width: 1100px;
   margin: 1rem 0;
   z-index: 4;
-  background: linear-gradient(to right, #f7c873, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   opacity: 1; /* <- siempre visible */
   transform: none; /* sin movimiento */
 }

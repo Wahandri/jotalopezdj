@@ -5,11 +5,13 @@ import { useTranslation } from "react-i18next";
 
 export default function Reviews() {
   const { t } = useTranslation();
-  const testimonios = t('reseñas', { returnObjects: true }) || [];
+  const testimonios = t("reseñas", { returnObjects: true }) || [];
 
   return (
     <section id="testimonios" className="reviews-section">
-      <h2 className="reviews-title">{t('reviewsTitle')}</h2>
+      <div className="display-center">
+        <h2 className="reviews-title text-gold">{t("reviewsTitle")}</h2>
+      </div>
       <div className="reviews-grid">
         {testimonios.map((review, index) => (
           <div key={index} className="review-card">

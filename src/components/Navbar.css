@@ -23,9 +23,6 @@
   /* width: 80px; */
   color: aliceblue;
   text-decoration: none;
-  background: linear-gradient(to right, #f7c873, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Toggle button (hamburger) */
