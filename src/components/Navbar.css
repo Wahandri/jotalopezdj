@@ -20,7 +20,12 @@
 
 /* Logo */
 .navbar-logo {
-  width: 80px;
+  /* width: 80px; */
+  color: aliceblue;
+  text-decoration: none;
+  background: linear-gradient(to right, #f7c873, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Toggle button (hamburger) */
@@ -52,18 +57,18 @@
 /* Active and hover styles */
 .navbar-link:hover,
 .navbar-link.active {
-  color: #B29977; /* Highlight color */
+  color: #b29977; /* Highlight color */
 }
 
 /* Underline animation */
 .navbar-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
   width: 100%;
   height: 2px;
-  background-color: #B29977;
+  background-color: #b29977;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;

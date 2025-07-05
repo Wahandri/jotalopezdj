@@ -5,47 +5,50 @@ import "./HeroSection.css";
 
 export default function HeroSection() {
   const { t } = useTranslation();
+
   const bgImageRef = useRef(null);
   const logoRef = useRef(null);
-  const logoContainerRef = useRef(null);
   const subtitleRef = useRef(null);
   const buttonRef = useRef(null);
   const titleRef = useRef(null);
 
   useEffect(() => {
+    const logo = logoRef.current;
     const wave = document.createElement("div");
     wave.className = "wave-effect";
 
-    const logoContainer = logoContainerRef.current;
-    const logo = logoRef.current;
-    const bgImage = bgImageRef.current;
-    const subtitle = subtitleRef.current;
-    const button = buttonRef.current;
-    const title = titleRef.current;
-
-    if (!logoContainer || !logo || !bgImage || !subtitle || !button || !title)
-      return;
+    const logoContainer = logo.parentElement;
+    if (!logoContainer) return;
 
     logoContainer.appendChild(wave);
 
-    requestAnimationFrame(() => {
-      logo.style.animation = "logo-pulse 0.8s ease";
-      wave.style.animation = "wave-animation 1.5s ease-out forwards";
-      bgImage.style.opacity = "1";
-      title.style.opacity = "1";
-      subtitle.style.animation = "fade-in 0.5s ease forwards";
-      button.style.animation = "fade-in 0.5s ease forwards";
-    });
+    const startAnimation = () => {
+      // Añadir animaciones tras logo centrado
+      logo.classList.add("logo-pulse");
+      wave.classList.add("wave-animate");
+      bgImageRef.current.style.opacity = "1";
 
-    const waveCleanup = setTimeout(() => wave.remove(), 1500);
-    return () => clearTimeout(waveCleanup);
+      // titleRef.current.style.animation = "fade-in 0.6s ease forwards";
+      subtitleRef.current.style.animation = "fade-in 0.6s ease forwards";
+      buttonRef.current.style.animation = "fade-in 0.6s ease forwards";
+
+      setTimeout(() => {
+        subtitleRef.current.classList.add("fade-in-up");
+        buttonRef.current.style.animation = "fade-in 0.5s ease forwards";
+      }, 1500); // Espera a que la onda termine
+    };
+
+    // Esperar a que termine entrada del logo
+    const entryDelay = setTimeout(startAnimation, 2000);
+
+    return () => clearTimeout(entryDelay);
   }, []);
 
   return (
     <section id="inicio" className="hero-section">
       <div className="hero-bg-image" ref={bgImageRef}></div>
 
-      <div className="heroSection-logo-container" ref={logoContainerRef}>
+      <div className="heroSection-logo-container">
         <img
           ref={logoRef}
           src="/logo.png"
