@@ -11,7 +11,7 @@ export default function ServiceCard({ servicio, onClick }) {
       lower.includes("hochzeit") ||
       lower.includes("bruiloft")
     ) {
-      return "https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg";
+      return "../images/BODAJUANITO.jpg";
     }
     if (
       lower.includes("cumpleaños") ||

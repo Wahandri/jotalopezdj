@@ -5,12 +5,7 @@
     "galeria": "Galería",
     "contacto": "Contacto",
     "reserva": "¡Reserva por WhatsApp!",
-    "social": [
-      "Instagram",
-      "Facebook",
-      "SoundCloud",
-      "YouTube"
-    ],
+    "social": ["Instagram", "Facebook", "SoundCloud", "YouTube"],
     "footerRights": "© 2025 Hermanos DJ. Todos los derechos reservados.",
     "servicios": "Servicios"
   },

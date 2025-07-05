@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.23.0",
+    "i18next": "^23.9.2",
+    "i18next-browser-languagedetector": "^7.0.1",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "i18next": "^23.9.2",
-    "react-i18next": "^14.1.1",
-    "i18next-browser-languagedetector": "^7.0.1"
+    "react-i18next": "^14.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
