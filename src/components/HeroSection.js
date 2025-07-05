@@ -10,28 +10,35 @@ export default function HeroSection() {
   const logoContainerRef = useRef(null);
   const subtitleRef = useRef(null);
   const buttonRef = useRef(null);
+  const titleRef = useRef(null);
 
   useEffect(() => {
     const wave = document.createElement("div");
     wave.className = "wave-effect";
-    logoContainerRef.current.appendChild(wave);
 
-    const slideTimer = setTimeout(() => {
-      logoRef.current.style.animation = "logo-pulse 0.8s ease";
+    const logoContainer = logoContainerRef.current;
+    const logo = logoRef.current;
+    const bgImage = bgImageRef.current;
+    const subtitle = subtitleRef.current;
+    const button = buttonRef.current;
+    const title = titleRef.current;
+
+    if (!logoContainer || !logo || !bgImage || !subtitle || !button || !title)
+      return;
+
+    logoContainer.appendChild(wave);
+
+    requestAnimationFrame(() => {
+      logo.style.animation = "logo-pulse 0.8s ease";
       wave.style.animation = "wave-animation 1.5s ease-out forwards";
-      bgImageRef.current.style.opacity = "1";
+      bgImage.style.opacity = "1";
+      title.style.opacity = "1";
+      subtitle.style.animation = "fade-in 0.5s ease forwards";
+      button.style.animation = "fade-in 0.5s ease forwards";
+    });
 
-      setTimeout(() => {
-        subtitleRef.current.style.animation = "fade-in 0.5s ease forwards";
-        buttonRef.current.style.animation = "fade-in 0.5s ease forwards";
-      }, 0);
-
-      setTimeout(() => {
-        wave.remove();
-      }, 1500);
-    }, 1);
-
-    return () => clearTimeout(slideTimer);
+    const waveCleanup = setTimeout(() => wave.remove(), 1500);
+    return () => clearTimeout(waveCleanup);
   }, []);
 
   return (
@@ -47,19 +54,23 @@ export default function HeroSection() {
         />
       </div>
 
-      <h1 className="hero-title">{t('hero.titulo')}</h1>
+      <h1 className="hero-title" ref={titleRef}>
+        {t("hero.titulo")}
+      </h1>
 
       <p className="hero-subtitle" ref={subtitleRef}>
-        {t('hero.subtitulo').split("\n").map((line, i) => (
-          <span key={i}>
-            {line}
-            <br />
-          </span>
-        ))}
+        {t("hero.subtitulo")
+          .split("\n")
+          .map((line, i) => (
+            <span key={i}>
+              {line}
+              <br />
+            </span>
+          ))}
       </p>
 
       <a href="https://wa.me/TUNUMERO" className="hero-button" ref={buttonRef}>
-        {t('hero.reserva')}
+        {t("hero.reserva")}
       </a>
     </section>
   );
