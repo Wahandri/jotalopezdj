@@ -41,7 +41,7 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
           <img
-            src="https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="/images/lopezDJ.jpg"
             alt="Hermanos DJ"
             className="about-main-image"
           />
