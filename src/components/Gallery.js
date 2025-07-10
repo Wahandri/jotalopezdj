@@ -2,8 +2,14 @@
 
 import "./Gallery.css";
 import Image from "next/image";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 export default function Gallery() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, threshold: 0.2 });
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const images = [
     { src: "/images/azotea2.jpg", alt: "Evento 1" },
     { src: "/images/IMG_4278.jpg", alt: "Luces" },
@@ -17,29 +23,74 @@ export default function Gallery() {
     { src: "/images/lopezDJ.jpg", alt: "Evento corporativo" },
   ];
 
+  const animationVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   return (
-    <section id="galeria" className="gallery-section">
-      <h2 className="gallery-title text-gold">Galería</h2>
-      <div className="masonry-grid">
-        {images.map((img, index) => (
-          <div key={index} className="masonry-item">
+    <section id="galeria" className="gallery-section" ref={ref}>
+      <motion.h2
+        className="gallery-title text-gold"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={animationVariants}
+        transition={{ duration: 0.6 }}
+      >
+        Galería
+      </motion.h2>
+
+      <motion.div
+        className="masonry-grid"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={animationVariants}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className="masonry-item"
+            onClick={() => setSelectedImage(img)}
+          >
             <Image
               src={img.src}
               alt={img.alt}
-              width={600} // proporcional, no exacto
+              width={600}
               height={400}
               className="gallery-image"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "cover",
-                objectPosition: "center bottom",
-                borderRadius: "0.5rem",
-              }}
             />
           </div>
         ))}
-      </div>
+      </motion.div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              className="modal-image-wrapper"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+            >
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                className="modal-image"
+                sizes="100vw"
+                style={{ objectFit: "contain" }}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

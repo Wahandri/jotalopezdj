@@ -13,6 +13,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import SpotyFloat from "@/components/SpotyFloat";
+import Prices from "@/components/Prices";
 
 export default function Home() {
   const { i18n } = useTranslation();
@@ -37,6 +38,8 @@ export default function Home() {
       <About />
 
       <Services />
+
+      <Prices />
 
       <Reviews />
 

@@ -64,46 +64,6 @@ export default function Services() {
           </motion.div>
         ))}
       </div>
-
-      {/* Sección de Paquetes */}
-      <div className="service-packages">
-        <div className="display-center">
-          <h3 className="package-title text-gold">{packageTitle}</h3>
-        </div>
-        <div className="package-list">
-          {paquetes.map((paquete, index) => (
-            <motion.div
-              key={index}
-              className="package-card animated-card"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={
-                isInView
-                  ? {
-                      opacity: 1,
-                      scale: [1, 1.1, 1], // pulse
-                    }
-                  : {}
-              }
-              transition={{
-                duration: 0.8,
-                ease: "easeOut",
-                delay: 0.2 * index,
-              }}
-              whileHover={{
-                scale: 1.03,
-              }}
-            >
-              <h4 className="package-name">{paquete.nombre}</h4>
-              <ul className="package-items">
-                {paquete.detalles.map((detalle, i) => (
-                  <li key={i}>{detalle}</li>
-                ))}
-              </ul>
-              <p className="package-price text-gold">{paquete.precio}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
