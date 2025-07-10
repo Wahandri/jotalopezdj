@@ -28,7 +28,7 @@
 }
 
 .service-card {
-  background-color: #1f2937; /* gray-800 */
+  background-color: #1f2937;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -40,18 +40,19 @@
   transform: scale(1.02);
 }
 
-.service-icon {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #374151; /* gray-700 */
-  height: 120px;
+.service-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.service-icon img {
-  width: 48px;
-  height: 48px;
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .service-content {
@@ -67,15 +68,15 @@
 .service-description {
   font-size: 1rem;
   line-height: 1.5;
-  color: #d1d5db; /* gray-300 */
+  color: #d1d5db;
 }
 
-/* ... servicios previos ya definidos ... */
+/* ======= Paquetes ======= */
 
 .service-packages {
   margin-top: 5rem;
   padding-top: 2rem;
-  border-top: 2px solid #374151; /* gray-700 */
+  border-top: 2px solid #374151;
 }
 
 .package-title {
@@ -106,6 +107,45 @@
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 👇 animación tipo reflejo solar */
+.animated-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    left: 100%;
+    opacity: 0.3;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 .package-name {
@@ -126,21 +166,5 @@
 .package-price {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #22c55e; /* green-500 */
-}
-
-.service-image-wrapper {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
-}
-
-.service-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-fit: cover;
-  object-position: bottom;
+  color: #22c55e;
 }

@@ -6,7 +6,7 @@ export default function SpotyFloat() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="spoty-float">
+    <div className="spoty-float" title="Spotify Player">
       <button className="toggle-button" onClick={() => setOpen(!open)}>
         {open ? "✖" : "🎵"}
       </button>

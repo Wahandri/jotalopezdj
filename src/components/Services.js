@@ -13,10 +13,8 @@ export default function Services() {
   const sectionTitle = t("nav.servicios");
   const packageTitle = t("paquetesTitle");
 
-  // Traducciones de servicios con textos
   const serviciosTraducidos = t("servicios", { returnObjects: true }) || [];
 
-  // Combinamos traducción + imagen (estática)
   const servicios = serviciosTraducidos.map((servicio, i) => ({
     ...servicio,
     image: serviciosData[i]?.image || "/images/default.jpg",
@@ -42,7 +40,7 @@ export default function Services() {
         {servicios.map((servicio, index) => (
           <motion.div
             key={index}
-            className=" borderCard"
+            className="service-card"
             initial={{ x: "100vw", opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{
@@ -74,7 +72,27 @@ export default function Services() {
         </div>
         <div className="package-list">
           {paquetes.map((paquete, index) => (
-            <div key={index} className="package-card">
+            <motion.div
+              key={index}
+              className="package-card animated-card"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={
+                isInView
+                  ? {
+                      opacity: 1,
+                      scale: [1, 1.1, 1], // pulse
+                    }
+                  : {}
+              }
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.2 * index,
+              }}
+              whileHover={{
+                scale: 1.03,
+              }}
+            >
               <h4 className="package-name">{paquete.nombre}</h4>
               <ul className="package-items">
                 {paquete.detalles.map((detalle, i) => (
@@ -82,7 +100,7 @@ export default function Services() {
                 ))}
               </ul>
               <p className="package-price text-gold">{paquete.precio}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
