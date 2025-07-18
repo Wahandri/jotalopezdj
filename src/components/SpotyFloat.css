@@ -1,45 +1,53 @@
-.spoty-float-group {
+/* === Posicionamiento flotante === */
+.float-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
   z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-end;
 }
 
-/* Botones flotantes */
-.float-button {
+.whatsapp-btn {
+  bottom: 20px;
+  right: 20px;
+}
+
+.spotify-btn {
+  bottom: 20px;
+  left: 20px;
+}
+
+/* === Botón solo icono con sombra === */
+.icon-only-button {
+  background: none;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 22px;
-  color: white;
+  padding: 0;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease;
 }
 
-.float-button:hover {
+.icon-only-button:hover {
   transform: scale(1.1);
 }
 
-/* Estilos individuales */
-.float-button.spotify {
-  background-color: #1db954;
+.icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: block;
 }
 
-.float-button.whatsapp {
-  background-color: #25d366;
+/* ✖ ícono para cerrar */
+.close-icon {
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 0 6px black;
 }
 
-/* Spotify Player */
+/* === Spotify Player desplegable === */
 .spotify-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .spotify-player {
@@ -59,21 +67,14 @@
   }
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 600px) {
-  .spoty-float-group {
-    bottom: 16px;
-    right: 16px;
-  }
-
-  .float-button {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
+  .icon-img {
+    width: 40px;
+    height: 40px;
   }
 
   .spotify-player {
-    width: calc(100vw - 32px);
-    padding: 0 12px;
+    width: calc(100vw - 40px);
   }
 }
