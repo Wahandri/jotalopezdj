@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import LanguageDropdown from "./LanguageDropdown";
 import "./Navbar.css";
 
 const sections = [
@@ -17,10 +18,9 @@ export default function Navbar({ lang, handleChangeLang }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  // Scrollspy - detectar sección visible
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY + 120; // offset
+      const scrollY = window.scrollY + 120;
 
       for (let id of sections) {
         const el = document.getElementById(id);
@@ -36,7 +36,7 @@ export default function Navbar({ lang, handleChangeLang }) {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // inicial
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -63,7 +63,6 @@ export default function Navbar({ lang, handleChangeLang }) {
           onClick={closeMenu}
         >
           <img src="/logopek.png" alt="Logo" className="navbar-logo" />
-          {/* <h2>Jota Lopez DJ</h2> */}
         </Link>
 
         <button className="navbar-toggle" onClick={toggleMenu}>
@@ -82,16 +81,7 @@ export default function Navbar({ lang, handleChangeLang }) {
             </Link>
           ))}
 
-          <select
-            onChange={handleChangeLang}
-            value={lang}
-            className="navbar-select"
-            aria-label="Seleccionar idioma"
-          >
-            <option value="es">Español</option>
-            <option value="en">English</option>
-            <option value="nl">Nederlands</option>
-          </select>
+          <LanguageDropdown lang={lang} handleChangeLang={handleChangeLang} />
         </div>
       </nav>
     </header>

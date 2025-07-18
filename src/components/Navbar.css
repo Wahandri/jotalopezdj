@@ -24,6 +24,13 @@
   color: aliceblue;
   text-decoration: none;
 }
+
+.flagIcon {
+  width: 30px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
 /* Animacion rotacion */
 .navbar-logo:hover {
   transform: rotate(180deg);

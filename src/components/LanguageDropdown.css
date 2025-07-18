@@ -1,0 +1,63 @@
+.flag-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.flag-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.flag-button img {
+  width: 32px;
+  border-radius: 999px;
+}
+
+/* Estilo base del dropdown */
+.flag-options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #1f2937;
+  border-radius: 4px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+/* Animación de entrada */
+.flag-options.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Animación de salida */
+.flag-options.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.flag-option {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.flag-option img {
+  width: 32px;
+  border-radius: 999px;
+}
