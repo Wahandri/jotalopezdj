@@ -178,53 +178,30 @@ export default function Home() {
         {/* Contacto */}
         <section id="contacto" className="container mx-auto px-6 py-16 max-w-3xl">
           <h3 className="text-3xl font-bold text-indigo-700 mb-8 text-center">Contáctanos</h3>
-          <form className="space-y-6 bg-white rounded-xl shadow-md p-8">
-            <div>
-              <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
-                Nombre
-              </label>
-              <input
-                id="nombre"
-                name="nombre"
-                type="text"
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder="Tu nombre"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder="tu@email.com"
-              />
-            </div>
-            <div>
-              <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700">
-                Mensaje
-              </label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows={4}
-                required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder="Escribe tu mensaje"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg hover:bg-indigo-800 transition"
+          <div className="flex flex-col items-center space-y-4">
+            <a
+              href="https://wa.me/34612356789"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg text-center hover:bg-indigo-800 transition"
             >
-              Enviar Mensaje
-            </button>
-          </form>
+              WhatsApp
+            </a>
+            <a
+              href="https://instagram.com/jotalopedj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg text-center hover:bg-indigo-800 transition"
+            >
+              Instagram
+            </a>
+            <a
+              href="mailto:jotalopedj@gmail.com"
+              className="w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg text-center hover:bg-indigo-800 transition"
+            >
+              Email
+            </a>
+          </div>
         </section>
   
         {/* Footer */}
