@@ -72,12 +72,6 @@
       "precio": "Vanaf €1.200"
     }
   ],
-  "contactoInfo": {
-    "nombrePlaceholder": "Jouw naam",
-    "emailPlaceholder": "Jouw e-mail",
-    "mensajePlaceholder": "Typ je bericht...",
-    "enviarMensaje": "Verstuur Bericht"
-  },
   "reseñas": [
     {
       "nombre": "Sofie D.",
@@ -89,5 +83,6 @@
     }
   ],
   "paquetesTitle": "Onze Servicepakketten",
-  "reviewsTitle": "Getuigenissen"
+  "reviewsTitle": "Getuigenissen",
+  "contactPrompt": "Neem gerust contact met ons op via:"
 }

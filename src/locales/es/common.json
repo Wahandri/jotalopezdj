@@ -67,12 +67,6 @@
       "precio": "Desde 1.200€"
     }
   ],
-  "contactoInfo": {
-    "nombrePlaceholder": "Tu nombre",
-    "emailPlaceholder": "Tu correo electrónico",
-    "mensajePlaceholder": "Escribe tu mensaje...",
-    "enviarMensaje": "Enviar Mensaje"
-  },
   "reseñas": [
     {
       "nombre": "Carlos M.",
@@ -84,5 +78,6 @@
     }
   ],
   "paquetesTitle": "Nuestros Paquetes de Servicios",
-  "reviewsTitle": "Testimonios"
+  "reviewsTitle": "Testimonios",
+  "contactPrompt": "No dudes en contactarnos por:"
 }

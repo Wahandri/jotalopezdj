@@ -72,12 +72,6 @@
       "precio": "From €1,200"
     }
   ],
-  "contactoInfo": {
-    "nombrePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
-    "mensajePlaceholder": "Write your message...",
-    "enviarMensaje": "Send Message"
-  },
   "reseñas": [
     {
       "nombre": "Michael R.",
@@ -89,5 +83,6 @@
     }
   ],
   "paquetesTitle": "Our Service Packages",
-  "reviewsTitle": "Testimonials"
+  "reviewsTitle": "Testimonials",
+  "contactPrompt": "Don't hesitate to contact us via:"
 }
