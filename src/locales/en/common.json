@@ -49,7 +49,9 @@
         "Ambient lighting",
         "Pre-event consultation"
       ],
-      "precio": "From €450"
+      "precio": "From €450",
+      "descripcion": "Ideal for intimate gatherings and smaller events. Includes a personalized playlist and fast setup to keep the music flowing.",
+      "imagen": "/images/imagen1.jpg"
     },
     {
       "nombre": "Premium Package",
@@ -59,7 +61,9 @@
         "Full professional lighting",
         "2 planning consultations"
       ],
-      "precio": "From €750"
+      "precio": "From €750",
+      "descripcion": "Perfect for medium-sized celebrations. Features a lit DJ booth, wireless microphone and complete support throughout the event.",
+      "imagen": "/images/imagen2.jpg"
     },
     {
       "nombre": "Exclusive Package",
@@ -69,7 +73,9 @@
         "Special effects and smoke machine",
         "Full event planning support"
       ],
-      "precio": "From €1,200"
+      "precio": "From €1,200",
+      "descripcion": "Our most complete experience for large events. Stage setup, live DJ performance and special effects tailored to your night.",
+      "imagen": "/images/imagen3.avif"
     }
   ],
   "reseñas": [
