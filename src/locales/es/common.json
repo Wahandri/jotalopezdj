@@ -44,7 +44,9 @@
         "Iluminación ambiental",
         "Consulta previa al evento"
       ],
-      "precio": "Desde 450€"
+      "precio": "Desde 450€",
+      "descripcion": "Ideal para eventos íntimos y reuniones pequeñas. Incluye playlist personalizada y montaje rápido para que todo suene perfecto desde el inicio.",
+      "imagen": "/images/imagen1.jpg"
     },
     {
       "nombre": "Paquete Premium",
@@ -54,7 +56,9 @@
         "Iluminación profesional completa",
         "2 consultas de planificación"
       ],
-      "precio": "Desde 750€"
+      "precio": "Desde 750€",
+      "descripcion": "Pensado para celebraciones medianas. Cabina iluminada, micrófono inalámbrico y asistencia completa durante tu evento.",
+      "imagen": "/images/imagen2.jpg"
     },
     {
       "nombre": "Paquete Exclusivo",
@@ -64,7 +68,9 @@
         "Efectos especiales y máquina de humo",
         "Planificación completa del evento"
       ],
-      "precio": "Desde 1.200€"
+      "precio": "Desde 1.200€",
+      "descripcion": "Nuestra opción más completa para grandes eventos. Escenario, DJ en vivo, efectos especiales y atención personalizada de principio a fin.",
+      "imagen": "/images/imagen3.avif"
     }
   ],
   "reseñas": [

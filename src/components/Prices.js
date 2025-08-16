@@ -1,9 +1,10 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import "./Services.css"; // usa mismos estilos
+import PackageModal from "./PackageModal";
 
 export default function Prices() {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ export default function Prices() {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const [selectedPackage, setSelectedPackage] = useState(null);
 
   return (
     <section id="precios" className="service-packages" ref={ref}>
@@ -40,6 +42,7 @@ export default function Prices() {
               scale: 1.03,
               boxShadow: "0 0 24px rgba(255, 255, 255, 0.15)",
             }}
+            onClick={() => setSelectedPackage(paquete)}
           >
             <h4 className="package-name">{paquete.nombre}</h4>
             <ul className="package-items">
@@ -51,6 +54,10 @@ export default function Prices() {
           </motion.div>
         ))}
       </div>
+      <PackageModal
+        paquete={selectedPackage}
+        onClose={() => setSelectedPackage(null)}
+      />
     </section>
   );
 }
