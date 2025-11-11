@@ -3,13 +3,8 @@
 import { useTranslation } from "react-i18next";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-<<<<<<< HEAD
 import "./Services.css"; // usa mismos estilos que los servicios
 import PriceModal from "./PriceModal";
-=======
-import "./Services.css"; // usa mismos estilos
-import PackageModal from "./PackageModal";
->>>>>>> ead7caf8480c72a16a057a96b18303c467a81f62
 
 // Componente Prices
 // Muestra las tarjetas de paquetes y abre un modal al hacer clic en ellas
@@ -21,7 +16,6 @@ export default function Prices() {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
-  const [selectedPackage, setSelectedPackage] = useState(null);
 
   // Estado para almacenar el paquete actualmente seleccionado
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -55,13 +49,9 @@ export default function Prices() {
               scale: 1.03,
               boxShadow: "0 0 24px rgba(255, 255, 255, 0.15)",
             }}
-<<<<<<< HEAD
             // Al hacer clic en la tarjeta, se abre el modal con el paquete correspondiente
             onClick={() => setSelectedPackage(paquete)}
             style={{ cursor: "pointer" }}
-=======
-            onClick={() => setSelectedPackage(paquete)}
->>>>>>> ead7caf8480c72a16a057a96b18303c467a81f62
           >
             <h4 className="package-name">{paquete.nombre}</h4>
             <ul className="package-items">
@@ -73,16 +63,9 @@ export default function Prices() {
           </motion.div>
         ))}
       </div>
-<<<<<<< HEAD
 
       {/* Modal para mostrar los detalles del paquete seleccionado */}
       <PriceModal paquete={selectedPackage} onClose={() => setSelectedPackage(null)} />
-=======
-      <PackageModal
-        paquete={selectedPackage}
-        onClose={() => setSelectedPackage(null)}
-      />
->>>>>>> ead7caf8480c72a16a057a96b18303c467a81f62
     </section>
   );
 }
