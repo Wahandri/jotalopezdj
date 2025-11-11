@@ -1,0 +1,89 @@
+/*
+ * Estilos para PriceModal
+ *
+ * Reutiliza la misma estructura que el modal de servicios, pero añade un
+ * estilo específico para la lista de detalles y el botón de contacto.
+ */
+
+/* Fonde negro semitransparente que cubre toda la pantalla */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Contenedor del modal */
+.modal-content {
+  background-color: #111;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de cierre en la esquina superior derecha */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Cuerpo del modal */
+.modal-body {
+  padding: 2rem;
+}
+
+/* Título del paquete */
+.modal-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #facc15; /* tono dorado elegante */
+}
+
+/* Lista de detalles */
+.modal-list {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  line-height: 1.5;
+}
+
+/* Precio del paquete */
+.modal-price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Botón de llamada a la acción */
+.contact-button {
+  display: inline-block;
+  background-color: #facc15;
+  color: #111;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #e5b600;
+}

@@ -150,6 +150,7 @@
 }
 
 .package-name {
+  color: #F7C975;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -167,5 +168,4 @@
 .package-price {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #22c55e;
 }

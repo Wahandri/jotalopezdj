@@ -1,20 +1,28 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import "./Services.css"; // usa mismos estilos
+import "./Services.css"; // usa mismos estilos que los servicios
+import PriceModal from "./PriceModal";
 
+// Componente Prices
+// Muestra las tarjetas de paquetes y abre un modal al hacer clic en ellas
 export default function Prices() {
   const { t } = useTranslation();
+  // Obtener el array de paquetes desde las traducciones
   const paquetes = t("paquetes", { returnObjects: true }) || [];
   const packageTitle = t("paquetesTitle");
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
+  // Estado para almacenar el paquete actualmente seleccionado
+  const [selectedPackage, setSelectedPackage] = useState(null);
+
   return (
     <section id="precios" className="service-packages" ref={ref}>
+      {/* Título de la sección */}
       <motion.div
         className="display-center"
         initial={{ opacity: 0, y: 20 }}
@@ -24,6 +32,7 @@ export default function Prices() {
         <h3 className="package-title text-gold">{packageTitle}</h3>
       </motion.div>
 
+      {/* Lista de paquetes */}
       <div className="package-list">
         {paquetes.map((paquete, index) => (
           <motion.div
@@ -40,6 +49,9 @@ export default function Prices() {
               scale: 1.03,
               boxShadow: "0 0 24px rgba(255, 255, 255, 0.15)",
             }}
+            // Al hacer clic en la tarjeta, se abre el modal con el paquete correspondiente
+            onClick={() => setSelectedPackage(paquete)}
+            style={{ cursor: "pointer" }}
           >
             <h4 className="package-name">{paquete.nombre}</h4>
             <ul className="package-items">
@@ -51,6 +63,9 @@ export default function Prices() {
           </motion.div>
         ))}
       </div>
+
+      {/* Modal para mostrar los detalles del paquete seleccionado */}
+      <PriceModal paquete={selectedPackage} onClose={() => setSelectedPackage(null)} />
     </section>
   );
 }
