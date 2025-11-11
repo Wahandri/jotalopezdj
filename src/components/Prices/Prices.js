@@ -3,8 +3,8 @@
 import { useTranslation } from "react-i18next";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import "./Services.css"; // usa mismos estilos que los servicios
-import PriceModal from "./PriceModal";
+import "../Services/Services.css"; // usa mismos estilos que los servicios
+import PriceModal from "../PriceModal/PriceModal";
 
 // Componente Prices
 // Muestra las tarjetas de paquetes y abre un modal al hacer clic en ellas

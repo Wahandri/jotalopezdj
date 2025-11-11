@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import LanguageDropdown from "./LanguageDropdown";
+import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import "./Navbar.css";
 
 const sections = [
