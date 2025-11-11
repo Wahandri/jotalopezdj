@@ -1,6 +1,6 @@
 "use client";
 
-import GradientText from "./GradientText";
+import GradientText from "../GradientText/GradientText";
 import "./About.css";
 import { useTranslation } from "react-i18next";
 import { motion, useInView } from "framer-motion";

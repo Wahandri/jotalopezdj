@@ -1,7 +1,7 @@
 "use client";
 
-import "./ServiceModal.css";
-import "./Services.css"; // for package list styles
+import "../ServiceModal/ServiceModal.css";
+import "../Services/Services.css"; // for package list styles
 
 export default function PackageModal({ paquete, onClose }) {
   if (!paquete) return null;
