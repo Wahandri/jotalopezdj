@@ -1,89 +1,394 @@
 /*
- * Estilos para PriceModal
- *
- * Reutiliza la misma estructura que el modal de servicios, pero añade un
- * estilo específico para la lista de detalles y el botón de contacto.
+ * Estilos Modernos para PriceModal
+ * Diseño premium con glassmorphism, animaciones y mejor UX
  */
 
-/* Fonde negro semitransparente que cubre toda la pantalla */
+/* Fondo oscuro semitransparente */
 .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
 }
 
-/* Contenedor del modal */
-.modal-content {
-  background-color: #111;
-  border-radius: 8px;
-  max-width: 600px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contenedor principal del modal */
+.modal-content.price-modal {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 1.5rem;
+  max-width: 550px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
   color: white;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(245, 158, 11, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* Botón de cierre en la esquina superior derecha */
+/* Estado "popular" */
+.modal-content.price-modal.popular {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(245, 158, 11, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Badge de "Más Popular" */
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #f7c873, #fbbf24);
+  color: #111827;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+/* Botón de cierre */
 .modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+
+.modal-close:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: scale(1.1) rotate(90deg);
+}
+
+.modal-close:active {
+  transform: scale(0.95);
 }
 
 /* Cuerpo del modal */
-.modal-body {
-  padding: 2rem;
+.modal-body.price-modal-body {
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+/* Encabezado con nombre y precio */
+.price-modal-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+  padding-bottom: 1.5rem;
 }
 
 /* Título del paquete */
-.modal-title {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #facc15; /* tono dorado elegante */
+.price-modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #f7c873, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Lista de detalles */
-.modal-list {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-  list-style-type: disc;
+/* Contenedor del precio */
+.price-display {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Descripción */
+.price-modal-description {
+  text-align: center;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.75rem 0;
+}
+
+/* Sección de características */
+.price-modal-features {
+  margin-bottom: 2rem;
+}
+
+.features-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Lista de características */
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  color: #e5e7eb;
+  font-size: 0.95rem;
   line-height: 1.5;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.05);
 }
 
-/* Precio del paquete */
-.modal-price {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+.feature-item:last-child {
+  border-bottom: none;
 }
 
-/* Botón de llamada a la acción */
-.contact-button {
-  display: inline-block;
-  background-color: #facc15;
-  color: #111;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+/* Sección CTA */
+.price-modal-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(245, 158, 11, 0.1);
+}
+
+/* Botones */
+.cta-button {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.contact-button:hover {
-  background-color: #e5b600;
+/* Botón primario (Contactar) */
+.cta-button.primary-button {
+  background: linear-gradient(135deg, #f7c873, #fbbf24);
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+.cta-button.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(245, 158, 11, 0.35),
+    0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.cta-button.primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+/* Botón secundario (Volver) */
+.cta-button.secondary-button {
+  background: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.cta-button.secondary-button:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary-button:active {
+  transform: translateY(0);
+}
+
+/* Scrollbar personalizado */
+.modal-content.price-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content.price-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content.price-modal::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.2);
+  border-radius: 3px;
+}
+
+.modal-content.price-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: 1rem;
+  }
+
+  .modal-content.price-modal {
+    max-width: 95%;
+    border-radius: 1.25rem;
+  }
+
+  .modal-body.price-modal-body {
+    padding: 2rem;
+  }
+
+  .price-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .price-value {
+    font-size: 1.5rem;
+  }
+
+  .features-title {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    font-size: 0.9rem;
+    padding: 0.65rem 0;
+  }
+
+  .cta-button {
+    min-width: 120px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .popular-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content.price-modal {
+    border-radius: 1rem;
+  }
+
+  .modal-body.price-modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .price-modal-title {
+    font-size: 1.3rem;
+  }
+
+  .price-value {
+    font-size: 1.25rem;
+  }
+
+  .price-modal-description {
+    font-size: 0.9rem;
+  }
+
+  .price-modal-features {
+    margin-bottom: 1.5rem;
+  }
+
+  .features-title {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-item {
+    font-size: 0.85rem;
+    gap: 0.6rem;
+    padding: 0.6rem 0;
+  }
+
+  .price-modal-cta {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .cta-button {
+    min-width: unset;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
 }

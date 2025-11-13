@@ -43,33 +43,49 @@
   "paquetes": [
     {
       "nombre": "Essential Package",
+      "descripcion": "Perfect for smaller events or limited budgets. Includes everything essential for a great event.",
       "detalles": [
         "4 hours of professional DJ service",
         "Basic sound system",
         "Ambient lighting",
-        "Pre-event consultation"
+        "Pre-event consultation",
+        "Customized music selection",
+        "Equipment transport included"
       ],
-      "precio": "From €450"
+      "precio": "From €450",
+      "popular": false
     },
     {
       "nombre": "Premium Package",
+      "descripcion": "Our most balanced option. Best value with excellent features for your event.",
       "detalles": [
         "6 hours of personalized DJ service",
         "Advanced sound system",
         "Full professional lighting",
-        "2 planning consultations"
+        "2 planning consultations",
+        "Selected special effects",
+        "Animation and coordination service",
+        "Wireless microphones",
+        "Professional setup and transport"
       ],
-      "precio": "From €750"
+      "precio": "From €750",
+      "popular": true
     },
     {
       "nombre": "Exclusive Package",
+      "descripcion": "The complete experience. For events that demand the best in every aspect.",
       "detalles": [
         "8 hours of exclusive DJ service",
         "High-end audiovisual equipment",
         "Special effects and smoke machine",
-        "Full event planning support"
+        "Full event planning support",
+        "Unlimited pre-event consultations",
+        "Complete day-of coordination",
+        "Custom LED backdrop",
+        "Follow-up and satisfaction guarantee"
       ],
-      "precio": "From €1,200"
+      "precio": "From €1,200",
+      "popular": false
     }
   ],
   "reseñas": [
@@ -100,5 +116,9 @@
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "facebook": "Facebook"
-  }
+  },
+  "popularLabel": "Most Popular",
+  "featuresLabel": "What's Included:",
+  "contactButton": "Contact",
+  "closeButton": "Back"
 }

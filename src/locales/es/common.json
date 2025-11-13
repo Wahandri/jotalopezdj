@@ -43,33 +43,49 @@
   "paquetes": [
     {
       "nombre": "Paquete Esencial",
+      "descripcion": "Perfecto para eventos más pequeños o presupuestos limitados. Incluye lo esencial para un gran evento.",
       "detalles": [
         "4 horas de servicio DJ profesional",
         "Equipo de sonido básico",
         "Iluminación ambiental",
-        "Consulta previa al evento"
+        "Consulta previa al evento",
+        "Música personalizada según tus preferencias",
+        "Transporte de equipos incluido"
       ],
-      "precio": "Desde 450€"
+      "precio": "Desde 450€",
+      "popular": false
     },
     {
       "nombre": "Paquete Premium",
+      "descripcion": "Nuestra opción más equilibrada. La mejor relación calidad-precio con excelentes características.",
       "detalles": [
         "6 horas de servicio DJ personalizado",
         "Sistema de sonido avanzado",
         "Iluminación profesional completa",
-        "2 consultas de planificación"
+        "2 consultas de planificación",
+        "Efectos especiales seleccionados",
+        "Servicio de animación y coordinación",
+        "Micrófonos inalámbricos",
+        "Transporte y montaje profesional"
       ],
-      "precio": "Desde 750€"
+      "precio": "Desde 750€",
+      "popular": true
     },
     {
       "nombre": "Paquete Exclusivo",
+      "descripcion": "La experiencia completa. Para eventos que exigen lo mejor en todos los aspectos.",
       "detalles": [
         "8 horas de servicio DJ exclusivo",
         "Equipo audiovisual de alta gama",
         "Efectos especiales y máquina de humo",
-        "Planificación completa del evento"
+        "Planificación completa del evento",
+        "Consultas ilimitadas previas",
+        "Coordinación total del día",
+        "Panel LED de fondo personalizado",
+        "Seguimiento y garantía de satisfacción"
       ],
-      "precio": "Desde 1.200€"
+      "precio": "Desde 1.200€",
+      "popular": false
     }
   ],
   "reseñas": [
@@ -134,5 +150,9 @@
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "facebook": "Facebook"
-  }
+  },
+  "popularLabel": "Más Popular",
+  "featuresLabel": "Lo que incluye:",
+  "contactButton": "Contactar",
+  "closeButton": "Volver"
 }

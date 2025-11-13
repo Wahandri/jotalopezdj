@@ -43,33 +43,49 @@
   "paquetes": [
     {
       "nombre": "Essentieel Pakket",
+      "descripcion": "Ideaal voor kleinere events of beperkte budgetten. Bevat alles wat nodig is voor een geweldig evenement.",
       "detalles": [
         "4 uur professionele DJ-service",
         "Basis geluidsinstallatie",
         "Sfeerverlichting",
-        "Voorafgaand consult"
+        "Voorafgaand consult",
+        "Gepersonaliseerde muziekkeuze",
+        "Transport van apparatuur inbegrepen"
       ],
-      "precio": "Vanaf €450"
+      "precio": "Vanaf €450",
+      "popular": false
     },
     {
       "nombre": "Premium Pakket",
+      "descripcion": "Onze meest evenwichtige optie. Beste waarde met uitstekende kenmerken voor jouw evenement.",
       "detalles": [
         "6 uur gepersonaliseerde DJ-service",
         "Geavanceerd geluidssysteem",
         "Volledige professionele verlichting",
-        "2 planningsgesprekken"
+        "2 planningsgesprekken",
+        "Geselecteerde speciale effecten",
+        "Animatie- en coördinatieservice",
+        "Draadloze microfoons",
+        "Professionele opbouw en transport"
       ],
-      "precio": "Vanaf €750"
+      "precio": "Vanaf €750",
+      "popular": true
     },
     {
       "nombre": "Exclusief Pakket",
+      "descripcion": "De complete beleving. Voor events die het allerbeste in elk opzicht vereisen.",
       "detalles": [
         "8 uur exclusieve DJ-service",
         "High-end audiovisuele apparatuur",
         "Speciale effecten en rookmachine",
-        "Volledige eventplanning"
+        "Volledige ondersteuning bij planning",
+        "Onbeperkte voorafgaande consulten",
+        "Volledige coördinatie op de dag zelf",
+        "Aangepast LED-achterscherm",
+        "Vervolgservice en tevredenheidswaarborg"
       ],
-      "precio": "Vanaf €1.200"
+      "precio": "Vanaf €1.200",
+      "popular": false
     }
   ],
   "reseñas": [
@@ -100,5 +116,9 @@
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "facebook": "Facebook"
-  }
+  },
+  "popularLabel": "Meest Popular",
+  "featuresLabel": "Wat is inbegrepen:",
+  "contactButton": "Contact",
+  "closeButton": "Terug"
 }
