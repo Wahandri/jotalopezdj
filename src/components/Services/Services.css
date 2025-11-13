@@ -1,12 +1,11 @@
 .services-section {
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
   background-color: #111827; /* gray-900 */
   color: white;
 }
 
 .services-title {
-  margin-top: 100px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2.5rem;
   text-align: center;
