@@ -83,5 +83,22 @@
     }
   ],
   "paquetesTitle": "Our Service Packages",
-  "reviewsTitle": "Testimonials"
+  "reviewsTitle": "Testimonials",
+  "contacto": {
+    "titulo": "Contact Us",
+    "descripcion": "Have a question or want to book our services? We'd love to hear from you.",
+    "telefono": "+34 612 356 789",
+    "email": "jotalopedj@gmail.com",
+    "ubicacion": "Spain",
+    "horario": "Available 24/7 for events",
+    "formularioNombre": "Name",
+    "formularioEmail": "Email Address",
+    "formularioAsunto": "Subject",
+    "formularioMensaje": "Message",
+    "formularioEnviar": "Send Message",
+    "redes": "Follow us on social media",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  }
 }

@@ -83,5 +83,22 @@
     }
   ],
   "paquetesTitle": "Onze Servicepakketten",
-  "reviewsTitle": "Getuigenissen"
+  "reviewsTitle": "Getuigenissen",
+  "contacto": {
+    "titulo": "Contact",
+    "descripcion": "Heb je een vraag of wil je onze diensten boeken? We horen graag van je.",
+    "telefono": "+34 612 356 789",
+    "email": "jotalopedj@gmail.com",
+    "ubicacion": "Spanje",
+    "horario": "Beschikbaar 24/7 voor evenementen",
+    "formularioNombre": "Naam",
+    "formularioEmail": "E-mailadres",
+    "formularioAsunto": "Onderwerp",
+    "formularioMensaje": "Bericht",
+    "formularioEnviar": "Bericht verzenden",
+    "redes": "Volg ons op social media",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  }
 }

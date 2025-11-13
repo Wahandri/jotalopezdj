@@ -5,7 +5,12 @@
     "galeria": "Galería",
     "contacto": "Contacto",
     "reserva": "¡Reserva por WhatsApp!",
-    "social": ["Instagram", "Facebook", "SoundCloud", "YouTube"],
+    "social": [
+      "Instagram",
+      "Facebook",
+      "SoundCloud",
+      "YouTube"
+    ],
     "footerRights": "© 2025 Hermanos DJ. Todos los derechos reservados.",
     "servicios": "Servicios"
   },
@@ -67,52 +72,67 @@
       "precio": "Desde 1.200€"
     }
   ],
-  "reviewsTitle": "Testimonios",
-"reseñas": [
-  {
-    "nombre": "Carlos M.",
-    "texto": "¡Increíble experiencia! Gracias por hacer de nuestra boda algo inolvidable.",
-    "rating": 5,
-    "fecha": "hace 2 días"
-  },
-  {
-    "nombre": "Laura G.",
-    "texto": "El ambiente que crearon fue mágico. Súper recomendados.",
-    "rating": 5,
-    "fecha": "hace 1 semana"
-  },
-  {
-    "nombre": "María G.",
-    "texto": "La pista estuvo llena toda la noche. Profesionalidad y buen gusto.",
-    "rating": 5,
-    "fecha": "hace 5 días"
-  },
-  {
-    "nombre": "Diego S.",
-    "texto": "Iluminación brutal y sonido impecable. Nuestros invitados fliparon.",
-    "rating": 5,
-    "fecha": "hace 10 días"
-  },
-  {
-    "nombre": "Ana P.",
-    "texto": "Puntuales y muy atentos. Supieron leer al público en todo momento.",
-    "rating": 4,
-    "fecha": "hace 3 semanas"
-  },
-  {
-    "nombre": "Patricia T.",
-    "texto": "Gran comunicación desde el primer contacto. Se nota la experiencia.",
-    "rating": 4,
-    "fecha": "hace 2 meses"
-  },
-  {
-    "nombre": "Iván C.",
-    "texto": "Respetaron nuestra lista y mezclaron todo perfecto. ¡Top!",
-    "rating": 5,
-    "fecha": "hace 4 días"
-  }
-],
-
+  "reseñas": [
+    {
+      "nombre": "Carlos M.",
+      "texto": "¡Increíble experiencia! Gracias por hacer de nuestra boda algo inolvidable.",
+      "rating": 5,
+      "fecha": "hace 2 días"
+    },
+    {
+      "nombre": "Laura G.",
+      "texto": "El ambiente que crearon fue mágico. Súper recomendados.",
+      "rating": 5,
+      "fecha": "hace 1 semana"
+    },
+    {
+      "nombre": "María G.",
+      "texto": "La pista estuvo llena toda la noche. Profesionalidad y buen gusto.",
+      "rating": 5,
+      "fecha": "hace 5 días"
+    },
+    {
+      "nombre": "Diego S.",
+      "texto": "Iluminación brutal y sonido impecable. Nuestros invitados fliparon.",
+      "rating": 5,
+      "fecha": "hace 10 días"
+    },
+    {
+      "nombre": "Ana P.",
+      "texto": "Puntuales y muy atentos. Supieron leer al público en todo momento.",
+      "rating": 4,
+      "fecha": "hace 3 semanas"
+    },
+    {
+      "nombre": "Patricia T.",
+      "texto": "Gran comunicación desde el primer contacto. Se nota la experiencia.",
+      "rating": 4,
+      "fecha": "hace 2 meses"
+    },
+    {
+      "nombre": "Iván C.",
+      "texto": "Respetaron nuestra lista y mezclaron todo perfecto. ¡Top!",
+      "rating": 5,
+      "fecha": "hace 4 días"
+    }
+  ],
   "paquetesTitle": "Nuestros Paquetes de Servicios",
-  "reviewsTitle": "Testimonios"
+  "reviewsTitle": "Testimonios",
+  "contacto": {
+    "titulo": "Contacto",
+    "descripcion": "¿Tienes una pregunta o quieres reservar nuestros servicios? Nos encantaría escucharte.",
+    "telefono": "+34 612 356 789",
+    "email": "jotalopedj@gmail.com",
+    "ubicacion": "España",
+    "horario": "Disponibles 24/7 para eventos",
+    "formularioNombre": "Nombre",
+    "formularioEmail": "Correo electrónico",
+    "formularioAsunto": "Asunto",
+    "formularioMensaje": "Mensaje",
+    "formularioEnviar": "Enviar mensaje",
+    "redes": "Síguenos en redes sociales",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "facebook": "Facebook"
+  }
 }
