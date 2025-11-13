@@ -31,6 +31,7 @@ export default function Navbar({ lang, handleChangeLang }) {
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
+        {/* Logo - Izquierda */}
         <Link
           href="/"
           className="navbar-logo text-gold"
@@ -39,11 +40,13 @@ export default function Navbar({ lang, handleChangeLang }) {
           <img src="/logopek.png" alt="Logo" className="navbar-logo" />
         </Link>
 
+        {/* Toggle button para móvil */}
         <button className="navbar-toggle" onClick={toggleMenu}>
           ☰
         </button>
 
-        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        {/* Links - Centro */}
+        <div className={`navbar-links-center ${menuOpen ? "open" : ""}`}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -54,7 +57,10 @@ export default function Navbar({ lang, handleChangeLang }) {
               {t(link.label)}
             </Link>
           ))}
+        </div>
 
+        {/* Language Dropdown - Derecha */}
+        <div className="navbar-right">
           <LanguageDropdown lang={lang} handleChangeLang={handleChangeLang} />
         </div>
       </nav>
