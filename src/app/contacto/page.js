@@ -1,14 +1,12 @@
 "use client";
 
-import HeroSection from "@/components/HeroSection/HeroSection";
-import About from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
 import SpotyFloat from "@/components/SpotyFloat/SpotyFloat";
 
-export default function Home() {
+export default function ContactoPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <HeroSection />
-      <About />
+      <Contact />
       <SpotyFloat />
     </main>
   );

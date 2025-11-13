@@ -30,7 +30,7 @@ export default function PriceModal({ paquete, onClose }) {
           {/* Precio del paquete */}
           <p className="modal-price text-gold">{paquete.precio}</p>
           {/* Llamada a la acción */}
-          <a href="#contacto" className="contact-button">
+          <a href="/contacto" className="contact-button">
             Contactar
           </a>
         </div>
