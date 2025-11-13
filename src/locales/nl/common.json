@@ -120,5 +120,14 @@
   "popularLabel": "Meest Popular",
   "featuresLabel": "Wat is inbegrepen:",
   "contactButton": "Contact",
-  "closeButton": "Terug"
+  "closeButton": "Terug",
+  "about": {
+    "subtitle": "We creëren sferen met muziek, professioneel geluid en verlichting.",
+    "feature1": "Ervaring",
+    "feature1Text": "Met meer dan 10 jaar ervaring in de DJ- en event-industrie hebben we honderden vieringen voorzien van onvergetelijke soundtracks. Van elegante bruiloften en bruisende verjaardagen tot privéconcerten en festivals — onze expertise zorgt ervoor dat elk nummer, elke overgang en elk muzikaal moment perfect aansluit bij de energie van jouw evenement. We weten welke nummers emoties losmaken, wanneer we de sfeer moeten veranderen, en hoe we het publiek lezen om de dansvloer de hele nacht vol te houden.",
+    "feature2": "Professionele Productie",
+    "feature2Text": "Het gaat niet alleen om muziek — het is een compleet audiovisueel beleveniswerk. We werken met ultramoderne geluidssystemen, dynamische LED-verlichtingssets, professionele rookmachines en visuele effecten die elke ruimte transformeren in een concertzaal. Ons technische team is gecertificeerd en getraind om alles af te handelen — van intieme binnenevenementen tot grootschalige buitenevenementen — met kristalhelder geluid, impactvolle verlichting en foutloos vakmanschap.",
+    "feature3": "Planning",
+    "feature3Text": "Elk evenement is uniek, en wij snappen dat. We voeren gedetailleerde voorafgaande consulten uit om je visie, je publiek, sleutelmomente (eerste dans, taartsnijden, verrassingen) en je stijl en schema te begrijpen. We coördineren met decorateurs, cateraars, ceremoniemeesters en andere leveranciers om ervoor te zorgen dat alles soepel verloopt. Op de dag zelf arriveert ons team vroeg, test alles en staat klaar om real-time aan te passen. Jouw gemoedsrust is ons succes."
+  }
 }

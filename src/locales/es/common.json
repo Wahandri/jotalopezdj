@@ -154,5 +154,14 @@
   "popularLabel": "Más Popular",
   "featuresLabel": "Lo que incluye:",
   "contactButton": "Contactar",
-  "closeButton": "Volver"
+  "closeButton": "Volver",
+  "about": {
+    "subtitle": "Transformamos ambientes con música, sonido e iluminación profesional.",
+    "feature1": "Experiencia",
+    "feature1Text": "Con más de 10 años en la industria, hemos creado la banda sonora perfecta para centenas de eventos. Desde bodas elegantes y cumpleaños vibrantes hasta conciertos privados y festivales — nuestra experiencia garantiza que cada nota, cada transición y cada momento musical está perfectamente sincronizado con la energía de tu celebración. Conocemos qué canciones generan emoción, cuándo cambiar de ritmo, y cómo leer al público para mantener la pista llena toda la noche.",
+    "feature2": "Producción Profesional",
+    "feature2Text": "No es solo música — es una experiencia audiovisual completa. Contamos con equipos de sonido de última generación, sistemas de iluminación LED dinámicos, máquinas de humo profesionales y efectos visuales que transforman cualquier espacio en un escenario de concierto. Nuestro equipo técnico está certificado y capacitado para manejar desde salones íntimos hasta espacios al aire libre de gran escala, garantizando sonido cristalino, luz impactante y profesionalismo en cada detalle.",
+    "feature3": "Planificación",
+    "feature3Text": "Cada evento es único, y nosotros lo entendemos. Realizamos consultas detalladas previas para conocer tu visión, el tipo de público, los momentos clave (entrada de novia, primer baile, sorpresas), y ajustamos nuestra propuesta a tu estilo y horario. Coordinamos con decoradores, catering, maestros de ceremonia y otros proveedores. El día del evento, nuestro equipo llega con anticipación, prueba todos los sistemas, y está listo para adaptarse sobre la marcha. Tu tranquilidad es nuestro éxito."
+  }
 }

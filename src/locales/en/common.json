@@ -120,5 +120,14 @@
   "popularLabel": "Most Popular",
   "featuresLabel": "What's Included:",
   "contactButton": "Contact",
-  "closeButton": "Back"
+  "closeButton": "Back",
+  "about": {
+    "subtitle": "We craft atmospheres with music, professional sound and lighting.",
+    "feature1": "Experience",
+    "feature1Text": "With over 10 years in the DJ and event entertainment industry, we've created unforgettable soundtracks for hundreds of celebrations. From elegant weddings and vibrant birthday parties to private concerts and festivals — our expertise ensures every song, transition, and musical moment perfectly complements the energy of your event. We know which tracks generate emotion, when to shift the vibe, and how to read the crowd to keep the dance floor packed all night long.",
+    "feature2": "Professional Production",
+    "feature2Text": "It's not just music — it's a complete audio-visual experience. We work with state-of-the-art sound systems, dynamic LED lighting rigs, professional fog machines, and visual effects that transform any space into a concert venue. Our technical team is certified and trained to handle everything from intimate indoor gatherings to large-scale outdoor events, delivering crystal-clear sound, impactful lighting, and flawless execution every single time.",
+    "feature3": "Planning",
+    "feature3Text": "Every event is unique, and we get it. We conduct detailed pre-event consultations to understand your vision, your audience type, key moments (first dance, cake cutting, surprises), and tailor our approach to your style and timeline. We coordinate with decorators, caterers, ceremony masters, and other vendors to ensure everything flows seamlessly. On the day, our team arrives early, tests every system, and stands ready to adapt in real time. Your peace of mind is our success."
+  }
 }
